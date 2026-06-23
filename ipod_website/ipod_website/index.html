@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lanyards Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="ipod">
+    <section class="screen">
+      <div class="statusbar">
+        <div class="left">lanyards <span class="wifi">◒</span></div>
+        <div id="time">00:00</div>
+        <div class="battery"></div>
+      </div>
+
+      <div class="desktop"></div>
+
+      <nav class="dock">
+<a class="app" href="schluesseldienst-hamburg.html">
+    <img class="icon" src="logo-dienst.png" alt="Schlüsseldienst Hamburg" />
+    <span>Schlüsseldienst<br>Hamburg</span>
+</a>
+
+        <a class="app" href="key-store.html">
+          <img class="icon" src="key-store.png" alt="Key-Store Icon" />
+          <span>Key-Store</span>
+        </a>
+      </nav>
+    </section>
+    <div class="homebutton"></div>
+  </main>
+
+  <script>
+    function updateTime() {
+      const now = new Date();
+      document.getElementById('time').textContent = now.toLocaleTimeString('de-DE', {
+        hour: '2-digit',
+        minute: '2-digit'
+      });
+    }
+    updateTime();
+    setInterval(updateTime, 1000);
+  </script>
+</body>
+</html>
